@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:ownpractice/helper/transform.dart';
 import 'package:flutter_tts/flutter_tts.dart';
+import 'package:widget_circular_animator/widget_circular_animator.dart';
 class Text_to_Speech extends StatelessWidget {
   const Text_to_Speech({Key? key}) : super(key: key);
 
@@ -131,22 +132,29 @@ class TxtToSpeech extends StatelessWidget {
             ),
 
             Positioned(
-              left: 139.0,
-              top: 410.0,
+              left: 115.0,
+              top: 405.0,
               right: null,
               bottom: null,
-              width: 82.0,
-              height: 78.0,
               child: GestureDetector(
                 onTap: () => speak(textEditingController.text),
-                child: Container(
-                  child: ClipRRect(
-                    borderRadius: BorderRadius.zero,
+                child: WidgetCircularAnimator(
+                  size: 130,
+                  innerIconsSize: 3,
+                  outerIconsSize: 3,
+                  innerAnimation: Curves.easeInOutBack,
+                  outerAnimation: Curves.easeInOutBack,
+                  innerColor: Colors.yellow,
+                  outerColor: Colors.orangeAccent,
+                  innerAnimationSeconds: 10,
+                  outerAnimationSeconds: 10,
+                  child: Container(
+                    decoration: BoxDecoration(
+                      shape: BoxShape.circle,
+                    ),
                     child: Image.asset(
                       "assets/images/Speaker-icon.png",
-                      color: null,
                       fit: BoxFit.cover,
-                      colorBlendMode: BlendMode.dstATop,
                     ),
                   ),
                 ),

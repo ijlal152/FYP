@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_tts/flutter_tts.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:tflite/tflite.dart';
+import 'package:widget_circular_animator/widget_circular_animator.dart';
 
 class Gallery extends StatelessWidget {
   const Gallery({Key? key}) : super(key: key);
@@ -75,6 +76,15 @@ class _TfliteModelState extends State<TfliteModel> {
       appBar: AppBar(
         title: const Text("Image Classification"),
         centerTitle: true,
+        elevation: 0.0,
+        leading: IconButton(
+          icon: Icon(Icons.arrow_back),
+          iconSize: 25.0,
+          onPressed: (){
+            //_goBack(context);
+          },
+        ),
+        //leading: InkWell(onTap: (){Navigator.pop(context);},),
       ),
       body: Container(
         color: Color.fromARGB(255, 16, 39, 83),
@@ -146,10 +156,28 @@ class _TfliteModelState extends State<TfliteModel> {
           ],
         ),
       ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: pickImage,
-        tooltip: "Pick Image",
-        child: const Icon(Icons.image),
+
+
+      floatingActionButton: Padding(
+        padding: const EdgeInsets.only(top: 680.0, left: 280.0),
+        child: WidgetCircularAnimator(
+          size: 70,
+          innerIconsSize: 3,
+          outerIconsSize: 3,
+          innerAnimation: Curves.easeInOutBack,
+          outerAnimation: Curves.easeInOutBack,
+          innerColor: Colors.yellow,
+          outerColor: Colors.orangeAccent,
+          innerAnimationSeconds: 10,
+          outerAnimationSeconds: 10,
+          child: FloatingActionButton(
+            onPressed: pickImage,
+            child: Container(
+              decoration: BoxDecoration(shape: BoxShape.circle),
+              child: Image.asset("assets/images/g2.png"),
+            ),
+          ),
+        ),
       ),
     );
   }
@@ -162,6 +190,7 @@ class _TfliteModelState extends State<TfliteModel> {
     File image=File(pickedFile!.path);
     imageClassification(image);
   }
+
 }
 
 // import 'dart:io';

@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:camera/camera.dart';
 import 'package:ownpractice/pages/RealTime/camerapage.dart';
 import '../../helper/transform.dart';
+import 'package:widget_circular_animator/widget_circular_animator.dart';
+
 class ObjectDetectInRealTime extends StatelessWidget {
   const ObjectDetectInRealTime({Key? key}) : super(key: key);
 
@@ -104,12 +106,10 @@ class _RealTimeDetectionState extends State<RealTimeDetection> {
               ),
             ),
             Positioned(
-              left: 139.0,
-              top: 400.0,
+              left: 115.0,
+              top: 375.0,
               right: null,
               bottom: null,
-              width: 82.0,
-              height: 78.0,
               child: GestureDetector(
                 // on tap function 
                 onTap: ()async{
@@ -121,14 +121,23 @@ class _RealTimeDetectionState extends State<RealTimeDetection> {
                           ),
                   );
                 },
-                child: Container(
-                  child: ClipRRect(
-                    borderRadius: BorderRadius.zero,
+                child: WidgetCircularAnimator(
+                  size: 130,
+                  innerIconsSize: 3,
+                  outerIconsSize: 3,
+                  innerAnimation: Curves.easeInOutBack,
+                  outerAnimation: Curves.easeInOutBack,
+                  innerColor: Colors.yellow,
+                  outerColor: Colors.orangeAccent,
+                  innerAnimationSeconds: 10,
+                  outerAnimationSeconds: 10,
+                  child: Container(
+                    decoration: BoxDecoration(
+                      shape: BoxShape.circle,
+                    ),
                     child: Image.asset(
                       "assets/images/camera-icon.png",
-                      color: null,
                       fit: BoxFit.cover,
-                      colorBlendMode: BlendMode.dstATop,
                     ),
                   ),
                 ),

@@ -44,13 +44,15 @@ class _YoutubeVideoFourState extends State<YoutubeVideoFour> {
         backgroundColor: Colors.blue,
         title: Text('Youtube Videos'),
       ),
+      backgroundColor: Color.fromARGB(255, 16, 39, 83),
       body: Center(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             Text("Cartoon" , style: TextStyle(
-              fontSize: 15,
+              fontSize: 25,
+              color: Colors.white,
             )),
             SizedBox(
               height: 10,

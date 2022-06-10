@@ -7,7 +7,7 @@ class HomeScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
           title: Text("Lets learn with flutter"),
-          centerTitle: true
+          centerTitle: true,
       ),
       body: Container(
         child: Stack(
@@ -21,7 +21,7 @@ class HomeScreen extends StatelessWidget {
               ),
             ),
             Positioned(
-              left: 145.0,
+              left: 130.0,
               top: 15.0,
               //right: null,
               bottom: null,

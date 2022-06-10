@@ -1,3 +1,4 @@
+import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:camera/camera.dart';
 import 'package:flutter/material.dart';
 import 'package:ownpractice/pages/ExtractTextFromImage.dart';
@@ -61,22 +62,25 @@ class _FirstScreenState extends State<FirstScreen> {
               alignment: Alignment.center,
               children: [
                 Positioned(
-                  left: 230.0,
+                  left: 220.0,
                   top: 50.0,
                   right: null,
                   bottom: null,
-                  width: 125.0,
-                  height: 162.0,
-                  child: Text('Lets learn with flutter',
-                    overflow: TextOverflow.visible,
-                    textAlign: TextAlign.left,
-                    style: TextStyle(
-                      height: 1.171875,
-                      fontSize: 34.0,
-                      fontFamily: 'Arial',
-                      fontWeight: FontWeight.w700,
-                      //color: Color.fromARGB(255, 93, 72, 72),
-                    ),
+                  width: 165.0,
+                  height: 173.0,
+                  child: AnimatedTextKit(
+                    animatedTexts: [
+                      FadeAnimatedText(
+                        'Lets learn with flutter',
+                        textStyle: TextStyle(
+                          fontSize: 38,
+                          fontFamily: 'WorkSans',
+                        ),
+                      ),
+
+                    ],
+                    repeatForever: true,
+                    isRepeatingAnimation: true,
                   ),
                 ),
                 Positioned(
@@ -123,17 +127,21 @@ class _FirstScreenState extends State<FirstScreen> {
                             bottom: null,
                             width: 89.0,
                             height: 23.0,
-                            child: Text(
-                              '''Click here''',
-                              overflow: TextOverflow.visible,
-                              textAlign: TextAlign.left,
-                              style: TextStyle(
-                                height: 1.171875,
-                                fontSize: 18.0,
-                                fontFamily: 'Work Sans',
-                                fontWeight: FontWeight.w800,
-                                color: Color.fromARGB(255, 255, 255, 255),
-                              ),
+                            child: AnimatedTextKit(
+                              animatedTexts: [
+                                WavyAnimatedText(
+                                  'Click here',
+                                  textStyle: TextStyle(
+                                    fontSize: 17.0,
+                                    fontFamily: 'WorkSans',
+                                    fontWeight: FontWeight.w800,
+                                    color: Colors.yellowAccent,
+                                    height: 1.171875,
+                                  ),
+                                ),
+                              ],
+                              isRepeatingAnimation: true,
+                              repeatForever: true,
                             ),
                           ),
                           Positioned(

@@ -21,6 +21,7 @@ void main() {
   WidgetsFlutterBinding.ensureInitialized();
   //cameras = await availableCameras();
   runApp(MaterialApp(
+    debugShowCheckedModeBanner: false,
     home: FirstScreen(),
     routes: {
       '/HomeScreen': (context) => HomeScreen(),

@@ -6,6 +6,7 @@ import 'package:ownpractice/pages/ImageFromGallery/DetectFromGallery.dart';
 import 'package:ownpractice/pages/RealTime/objectdetection.dart';
 //import 'package:ownpractice/pages/RealTimeObjectDetection/main_realtime.dart';
 import 'package:ownpractice/pages/TextToSpeech.dart';
+import 'package:ownpractice/pages/firstdeveloper.dart';
 import 'package:ownpractice/pages/homepage.dart';
 import 'package:ownpractice/pages/youtube_api1.dart';
 import 'package:ownpractice/pages/youtube_api2.dart';
@@ -85,7 +86,7 @@ class _FirstScreenState extends State<FirstScreen> {
                   ),
                 ),
                 Positioned(
-                  left: 95.0,
+                  left: 80.0,
                   top: 573.0,
                   right: null,
                   bottom: null,
@@ -114,8 +115,6 @@ class _FirstScreenState extends State<FirstScreen> {
                             width: 210.0,
                             height: 46.0,
                             child: Container(
-                              width: 210.0,
-                              height: 46.0,
                               decoration: BoxDecoration(
                                 borderRadius: BorderRadius.circular(45.0),
                               ),
@@ -176,7 +175,38 @@ class _FirstScreenState extends State<FirstScreen> {
                         ],
                       ),
                     ),
-                  ),)
+                  ),),
+                Positioned(
+                  height: 70,
+                  width: 70,
+                  left: 150.0,
+                  top: 650.0,
+                  child: GestureDetector(
+                    onTap: (){Navigator.of(context).push(CubePageRoute(
+                      enterPage: FirstDeveloper(),
+                      duration: const Duration(milliseconds: 900),
+                    )
+                    );},
+                    child: AvatarGlow(
+                      startDelay: Duration(milliseconds: 1000),
+                      glowColor: Colors.yellowAccent,
+                      duration: Duration(milliseconds: 2000),
+                      repeat: true,
+                      showTwoGlows: true,
+                      repeatPauseDuration: Duration(milliseconds: 100),
+                      endRadius: 170.0,
+                      child: Material(
+                        elevation: 8.0,
+                        shape: CircleBorder(),
+                        child: CircleAvatar(
+                          child: Image.asset('assets/images/dev1.png'),
+                          radius: 25,
+                        ),
+                      ),
+
+                    ),
+                  ),
+                ),
               ],
             ),
           ),

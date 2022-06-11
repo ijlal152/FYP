@@ -38,6 +38,7 @@ dependencies:
   carousel_slider: ^4.1.1
   cube_transition: ^1.0.2
   avatar_glow: ^2.0.2
+  slimy_card: ^1.0.4
 
 
   #newproject:

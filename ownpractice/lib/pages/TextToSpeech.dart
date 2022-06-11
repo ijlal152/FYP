@@ -69,7 +69,7 @@ class TxtToSpeech extends StatelessWidget {
               ),
             ),
             Positioned(
-              left: 120.0,
+              left: 110.0,
               top: 212.0,
               right: null,
               bottom: null,
@@ -80,7 +80,7 @@ class TxtToSpeech extends StatelessWidget {
                 style: TextStyle(
                   height: 1.171875,
                   fontSize: 18.0,
-                  fontFamily: 'Work Sans',
+                  fontFamily: 'WorkSans',
                   fontWeight: FontWeight.w800,
                   color: Color.fromARGB(255, 255, 255, 255),
                   /* letterSpacing: -0.36, */

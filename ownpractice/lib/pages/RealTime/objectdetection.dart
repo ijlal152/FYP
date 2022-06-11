@@ -65,7 +65,7 @@ class _RealTimeDetectionState extends State<RealTimeDetection> {
               ),
             ),
             Positioned(
-              left: 80.0,
+              left: 60.0,
               top: 212.0,
               right: null,
               bottom: null,
@@ -76,7 +76,7 @@ class _RealTimeDetectionState extends State<RealTimeDetection> {
                 style: TextStyle(
                   height: 1.171875,
                   fontSize: 18.0,
-                  fontFamily: 'Work Sans',
+                  fontFamily: 'WorkSans',
                   fontWeight: FontWeight.w800,
                   color: Color.fromARGB(255, 255, 255, 255),
                   /* letterSpacing: -0.36, */

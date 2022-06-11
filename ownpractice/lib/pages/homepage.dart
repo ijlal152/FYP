@@ -1,4 +1,14 @@
+import 'package:animated_text_kit/animated_text_kit.dart';
+import 'package:cube_transition/cube_transition.dart';
 import 'package:flutter/material.dart';
+import 'package:ownpractice/pages/ExtractTextFromImage.dart';
+import 'package:ownpractice/pages/ImageFromGallery/DetectFromGallery.dart';
+import 'package:ownpractice/pages/RealTime/objectdetection.dart';
+import 'package:ownpractice/pages/TextToSpeech.dart';
+import 'package:ownpractice/pages/youtube_api1.dart';
+import 'package:ownpractice/pages/youtube_api2.dart';
+import 'package:ownpractice/pages/youtube_api3.dart';
+import 'package:ownpractice/pages/youtube_api4.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -76,7 +86,12 @@ class HomeScreen extends StatelessWidget {
                                 width: 181.0,
                                 height: 260.0,
                                 child: GestureDetector(
-                                  onTap: ()=> Navigator.pushNamed(context, '/YoutubeApi'),
+                                  //onTap: ()=> Navigator.pushNamed(context, '/YoutubeApi'),
+                                  onTap: (){Navigator.of(context).push(CubePageRoute(
+                                    enterPage: YoutubeApiApp(),
+                                    duration: Duration(milliseconds: 900),
+                                  )
+                                  );},
                                   child: Container(
                                     decoration: BoxDecoration(
                                       borderRadius: BorderRadius.circular(14.0),
@@ -101,7 +116,12 @@ class HomeScreen extends StatelessWidget {
                                 width: 181.0,
                                 height: 260.0,
                                 child: GestureDetector(
-                                  onTap: ()=> Navigator.pushNamed(context, '/YoutubeApi2'),
+                                  //onTap: ()=> Navigator.pushNamed(context, '/YoutubeApi2'),
+                                  onTap: (){Navigator.of(context).push(CubePageRoute(
+                                    enterPage: YoutubeApiApp_two(),
+                                    duration: Duration(milliseconds: 900),
+                                  )
+                                  );},
                                   child: Container(
                                     width: 181.0,
                                     height: 260.0,
@@ -130,7 +150,12 @@ class HomeScreen extends StatelessWidget {
                                 width: 181.0,
                                 height: 260.0,
                                 child: GestureDetector(
-                                  onTap: ()=> Navigator.pushNamed(context, '/YoutubeApi4'),
+                                  //onTap: ()=> Navigator.pushNamed(context, '/YoutubeApi4'),
+                                  onTap: (){Navigator.of(context).push(CubePageRoute(
+                                    enterPage: YoutubeApiAppFour(),
+                                    duration: Duration(milliseconds: 900),
+                                  )
+                                  );},
                                   child: Container(
                                     width: 181.0,
                                     height: 260.0,
@@ -159,7 +184,12 @@ class HomeScreen extends StatelessWidget {
                                 width: 181.0,
                                 height: 260.0,
                                 child: GestureDetector(
-                                  onTap: ()=> Navigator.pushNamed(context, '/YoutubeApi3'),
+                                  //onTap: ()=> Navigator.pushNamed(context, '/YoutubeApi3'),
+                                  onTap: (){Navigator.of(context).push(CubePageRoute(
+                                    enterPage: YoutubeApiAppThree(),
+                                    duration: Duration(milliseconds: 900),
+                                  )
+                                  );},
                                   child: Container(
                                     width: 181.0,
                                     height: 260.0,
@@ -195,18 +225,20 @@ class HomeScreen extends StatelessWidget {
               bottom: null,
               width: 120.0,
               height: 23.0,
-              child: Text(
-                '''Learn with AI''',
-                overflow: TextOverflow.visible,
-                textAlign: TextAlign.left,
-                style: TextStyle(
+              child: AnimatedTextKit(
+                animatedTexts: [
+                  WavyAnimatedText(
+                'Learn with AI',
+                textStyle: TextStyle(
                   height: 1.171875,
                   fontSize: 18.0,
                   fontFamily: 'WorkSans',
                   fontWeight: FontWeight.w600,
                   color: Color.fromARGB(255, 255, 255, 255),
-                  /* letterSpacing: -0.36, */
                 ),
+              ),],
+                isRepeatingAnimation: true,
+                repeatForever: true,
               ),
             ),
 
@@ -364,7 +396,12 @@ class HomeScreen extends StatelessWidget {
                                       width: 323.0,
                                       height: 76.0,
                                       child: GestureDetector(
-                                        onTap: () => Navigator.pushNamed(context, '/RealTime'),
+                                        //onTap: () => Navigator.pushNamed(context, '/RealTime'),
+                                        onTap: (){Navigator.of(context).push(CubePageRoute(
+                                          enterPage: ObjectDetectInRealTime(),
+                                          duration: Duration(milliseconds: 900),
+                                        )
+                                        );},
                                         child: Container(
                                           width: 310.0,
                                           height: 76.0,
@@ -477,7 +514,12 @@ class HomeScreen extends StatelessWidget {
                                       width: 323.0,
                                       height: 76.0,
                                       child: GestureDetector(
-                                        onTap: () => Navigator.pushNamed(context, '/FromGallery'),
+                                        //onTap: () => Navigator.pushNamed(context, '/FromGallery'),
+                                        onTap: (){Navigator.of(context).push(CubePageRoute(
+                                          enterPage: Gallery(),
+                                          duration: Duration(milliseconds: 900),
+                                        )
+                                        );},
                                         child: Container(
                                           width: 310.0,
                                           height: 76.0,
@@ -591,7 +633,12 @@ class HomeScreen extends StatelessWidget {
                                       width: 323.0,
                                       height: 76.0,
                                       child: GestureDetector(
-                                        onTap: () => Navigator.pushNamed(context, '/TextToSpeech'),
+                                        //onTap: () => Navigator.pushNamed(context, '/TextToSpeech'),
+                                        onTap: (){Navigator.of(context).push(CubePageRoute(
+                                          enterPage: TxtToSpeech(),
+                                          duration: Duration(milliseconds: 900),
+                                        )
+                                        );},
                                         child: Container(
                                           decoration: BoxDecoration(
                                             borderRadius: BorderRadius.circular(18.0),
@@ -701,7 +748,12 @@ class HomeScreen extends StatelessWidget {
                                       width: 323.0,
                                       height: 76.0,
                                       child: GestureDetector(
-                                        onTap: () => Navigator.pushNamed(context, '/ExtractTextFromImage'),
+                                        //onTap: () => Navigator.pushNamed(context, '/ExtractTextFromImage'),
+                                        onTap: (){Navigator.of(context).push(CubePageRoute(
+                                          enterPage: ExtractTextFromImage(),
+                                          duration: Duration(milliseconds: 900),
+                                        )
+                                        );},
                                         child: Container(
                                           width: 310.0,
                                           height: 76.0,

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+
 class HomeScreen extends StatelessWidget {
   const HomeScreen({Key? key}) : super(key: key);
 
@@ -129,7 +130,7 @@ class HomeScreen extends StatelessWidget {
                                 width: 181.0,
                                 height: 260.0,
                                 child: GestureDetector(
-                                  onTap: ()=> Navigator.pushNamed(context, '/YoutubeApi3'),
+                                  onTap: ()=> Navigator.pushNamed(context, '/YoutubeApi4'),
                                   child: Container(
                                     width: 181.0,
                                     height: 260.0,
@@ -158,7 +159,7 @@ class HomeScreen extends StatelessWidget {
                                 width: 181.0,
                                 height: 260.0,
                                 child: GestureDetector(
-                                  onTap: ()=> Navigator.pushNamed(context, '/YoutubeApi4'),
+                                  onTap: ()=> Navigator.pushNamed(context, '/YoutubeApi3'),
                                   child: Container(
                                     width: 181.0,
                                     height: 260.0,
@@ -192,7 +193,7 @@ class HomeScreen extends StatelessWidget {
               top: 340.0,
               right: null,
               bottom: null,
-              width: 116.0,
+              width: 120.0,
               height: 23.0,
               child: Text(
                 '''Learn with AI''',
@@ -201,7 +202,7 @@ class HomeScreen extends StatelessWidget {
                 style: TextStyle(
                   height: 1.171875,
                   fontSize: 18.0,
-                  fontFamily: 'Work Sans',
+                  fontFamily: 'WorkSans',
                   fontWeight: FontWeight.w600,
                   color: Color.fromARGB(255, 255, 255, 255),
                   /* letterSpacing: -0.36, */
@@ -402,11 +403,11 @@ class HomeScreen extends StatelessWidget {
                                       ),
                                     ),
                                     Positioned(
-                                      left: 128.0,
+                                      left: 120.0,
                                       top: 26.0,
                                       right: null,
                                       bottom: null,
-                                      width: 184.0,
+                                      width: 190.0,
                                       height: 18.0,
                                       child: Text(
                                         '''Real Time Object Detection''',
@@ -415,7 +416,7 @@ class HomeScreen extends StatelessWidget {
                                         style: TextStyle(
                                           height: 1.171875,
                                           fontSize: 14.0,
-                                          fontFamily: 'Work Sans',
+                                          fontFamily: 'WorkSans',
                                           fontWeight: FontWeight.w600,
                                           color: Color.fromARGB(255, 255, 255, 255),
                                           /* letterSpacing: -0.28, */
@@ -424,11 +425,11 @@ class HomeScreen extends StatelessWidget {
                                     ),
 
                                     Positioned(
-                                      left: 128.0,
+                                      left: 120.0,
                                       top: 63.0,
                                       right: null,
                                       bottom: null,
-                                      width: 69.0,
+                                      width: 75.0,
                                       height: 18.0,
                                       child: Text(
                                         '''Click here''',
@@ -437,7 +438,7 @@ class HomeScreen extends StatelessWidget {
                                         style: TextStyle(
                                           height: 1.171875,
                                           fontSize: 14.0,
-                                          fontFamily: 'Work Sans',
+                                          fontFamily: 'WorkSans',
                                           fontWeight: FontWeight.w700,
                                           color: Color.fromARGB(255, 255, 255, 255),
                                           /* letterSpacing: -0.28, */
@@ -459,17 +460,13 @@ class HomeScreen extends StatelessWidget {
                                         style: TextStyle(
                                           height: 1.171875,
                                           fontSize: 14.0,
-                                          fontFamily: 'Work Sans',
+                                          fontFamily: 'WorkSans',
                                           fontWeight: FontWeight.w900,
                                           color: Colors.white,
                                           /* letterSpacing: -0.28, */
                                         ),
                                       ),
                                     ),
-
-
-
-
 
 
                                     Positioned(     // second rectangle
@@ -532,7 +529,7 @@ class HomeScreen extends StatelessWidget {
                                         style: TextStyle(
                                           height: 1.171875,
                                           fontSize: 14.0,
-                                          fontFamily: 'Work Sans',
+                                          fontFamily: 'WorkSans',
                                           fontWeight: FontWeight.w900,
                                           color: Colors.white,
 
@@ -542,11 +539,11 @@ class HomeScreen extends StatelessWidget {
                                     ),
 
                                     Positioned(
-                                      left: 128.0,
+                                      left: 120.0,
                                       top: 175.0,
                                       right: null,
                                       bottom: null,
-                                      width: 69.0,
+                                      width: 75.0,
                                       height: 18.0,
                                       child: Text(
                                         '''Click here''',
@@ -555,7 +552,7 @@ class HomeScreen extends StatelessWidget {
                                         style: TextStyle(
                                           height: 1.171875,
                                           fontSize: 14.0,
-                                          fontFamily: 'Work Sans',
+                                          fontFamily: 'WorkSans',
                                           fontWeight: FontWeight.w700,
                                           color: Color.fromARGB(255, 255, 255, 255),
 
@@ -565,7 +562,7 @@ class HomeScreen extends StatelessWidget {
                                     ),
 
                                     Positioned(
-                                      left: 128.0,
+                                      left: 120.0,
                                       top: 130.0,
                                       right: null,
                                       bottom: null,
@@ -578,7 +575,7 @@ class HomeScreen extends StatelessWidget {
                                         style: TextStyle(
                                           height: 1.171875,
                                           fontSize: 14.0,
-                                          fontFamily: 'Work Sans',
+                                          fontFamily: 'WorkSans',
                                           fontWeight: FontWeight.w600,
                                           color: Color.fromARGB(255, 255, 255, 255),
                                           /* letterSpacing: -0.28, */
@@ -646,7 +643,7 @@ class HomeScreen extends StatelessWidget {
                                         style: TextStyle(
                                           height: 1.171875,
                                           fontSize: 14.0,
-                                          fontFamily: 'Work Sans',
+                                          fontFamily: 'WorkSans',
                                           fontWeight: FontWeight.w900,
                                           color: Colors.white,
                                           /* letterSpacing: -0.28, */
@@ -655,7 +652,7 @@ class HomeScreen extends StatelessWidget {
                                     ),
 
                                     Positioned(
-                                      left: 128.0,
+                                      left: 120.0,
                                       top: 238.0,
                                       right: null,
                                       bottom: null,
@@ -668,7 +665,7 @@ class HomeScreen extends StatelessWidget {
                                         style: TextStyle(
                                           height: 1.171875,
                                           fontSize: 14.0,
-                                          fontFamily: 'Work Sans',
+                                          fontFamily: 'WorkSans',
                                           fontWeight: FontWeight.w600,
                                           color: Color.fromARGB(255, 255, 255, 255),
                                           /* letterSpacing: -0.28, */
@@ -676,11 +673,11 @@ class HomeScreen extends StatelessWidget {
                                       ),
                                     ),
                                     Positioned(
-                                        left: 128.0,
+                                        left: 120.0,
                                         top: 279.0,
                                         right: null,
                                         bottom: null,
-                                        width: 69.0,
+                                        width: 75.0,
                                         height: 18.0,
                                         child: Text(
                                           '''Click here''',
@@ -689,7 +686,7 @@ class HomeScreen extends StatelessWidget {
                                           style: TextStyle(
                                             height: 1.171875,
                                             fontSize: 14.0,
-                                            fontFamily: 'Work Sans',
+                                            fontFamily: 'WorkSans',
                                             fontWeight: FontWeight.w700,
                                             color: Color.fromARGB(255, 255, 255, 255),
                                             /* letterSpacing: -0.28, */
@@ -743,7 +740,7 @@ class HomeScreen extends StatelessWidget {
                                       ),
                                     ),
                                     Positioned(
-                                      left: 127.0,
+                                      left: 120.0,
                                       top: 347.0,
                                       right: null,
                                       bottom: null,
@@ -756,7 +753,7 @@ class HomeScreen extends StatelessWidget {
                                         style: TextStyle(
                                           height: 1.171875,
                                           fontSize: 14.0,
-                                          fontFamily: 'Work Sans',
+                                          fontFamily: 'WorkSans',
                                           fontWeight: FontWeight.w600,
                                           color: Color.fromARGB(255, 255, 255, 255),
                                           /* letterSpacing: -0.28, */
@@ -777,7 +774,7 @@ class HomeScreen extends StatelessWidget {
                                         style: TextStyle(
                                           height: 1.171875,
                                           fontSize: 14.0,
-                                          fontFamily: 'Work Sans',
+                                          fontFamily: 'WorkSans',
                                           fontWeight: FontWeight.w900,
                                           color: Colors.white,
                                           /* letterSpacing: -0.28, */
@@ -786,11 +783,11 @@ class HomeScreen extends StatelessWidget {
                                     ),
 
                                     Positioned(
-                                      left: 128.0,
+                                      left: 120.0,
                                       top: 390.0,
                                       right: null,
                                       bottom: null,
-                                      width: 69.0,
+                                      width: 75.0,
                                       height: 18.0,
                                       child: Text(
                                         '''Click here''',
@@ -799,7 +796,7 @@ class HomeScreen extends StatelessWidget {
                                         style: TextStyle(
                                           height: 1.171875,
                                           fontSize: 14.0,
-                                          fontFamily: 'Work Sans',
+                                          fontFamily: 'WorkSans',
                                           fontWeight: FontWeight.w700,
                                           color: Color.fromARGB(255, 255, 255, 255),
                                           /* letterSpacing: -0.28, */

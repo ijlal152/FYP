@@ -12,6 +12,8 @@ import 'package:ownpractice/pages/youtube_api2.dart';
 import 'package:ownpractice/pages/youtube_api3.dart';
 import 'package:ownpractice/pages/youtube_api4.dart';
 import 'package:particles_flutter/particles_flutter.dart';
+import 'package:cube_transition/cube_transition.dart';
+import 'package:avatar_glow/avatar_glow.dart';
 
 //List<CameraDescription> cameras =0 as List<CameraDescription>;
 void main() {
@@ -90,83 +92,97 @@ class _FirstScreenState extends State<FirstScreen> {
                   bottom: null,
                   width: 210.0,
                   height: 46.0,
-                  child: GestureDetector(
-                    onTap: () => Navigator.pushNamed(context, '/HomeScreen'),
-                    child: Container(
-                      width: 210.0,
-                      height: 46.0,
-                      child: Stack(
-                        fit: StackFit.expand,
-                        alignment: Alignment.center,
-                        children: [
-                          Positioned(
-                            left: 0.0,
-                            top: 0.0,
-                            right: null,
-                            bottom: null,
-                            width: 210.0,
-                            height: 46.0,
-                            child: Container(
+                  child: AvatarGlow(
+                    glowColor: Colors.red,
+                    endRadius: 10.0,
+                    duration: Duration(milliseconds: 2000),
+                    repeat: true,
+                    showTwoGlows: true,
+                    repeatPauseDuration: Duration(milliseconds: 100),
+                    child: GestureDetector(
+                      //onTap: () => Navigator.pushNamed(context, '/HomeScreen'),
+                      onTap: (){Navigator.of(context).push(CubePageRoute(
+                        enterPage: HomeScreen(),
+                        //exitPage: this,
+                        duration: const Duration(milliseconds: 900),
+                      )
+                      );},
+                      child: Container(
+                        width: 210.0,
+                        height: 46.0,
+                        child: Stack(
+                          fit: StackFit.expand,
+                          alignment: Alignment.center,
+                          children: [
+                            Positioned(
+                              left: 0.0,
+                              top: 0.0,
+                              right: null,
+                              bottom: null,
                               width: 210.0,
                               height: 46.0,
-                              decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(45.0),
-                              ),
-                              child: ClipRRect(
-                                borderRadius: BorderRadius.circular(45.0),
-                                child: Container(
-                                  color: Color.fromARGB(173, 67, 28, 149),
+                              child: Container(
+                                width: 210.0,
+                                height: 46.0,
+                                decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(45.0),
                                 ),
-                              ),
-                            ),
-                          ),
-                          Positioned(
-                            left: 73.0,
-                            top: 12.0,
-                            right: null,
-                            bottom: null,
-                            width: 89.0,
-                            height: 23.0,
-                            child: AnimatedTextKit(
-                              animatedTexts: [
-                                WavyAnimatedText(
-                                  'Click here',
-                                  textStyle: TextStyle(
-                                    fontSize: 17.0,
-                                    fontFamily: 'WorkSans',
-                                    fontWeight: FontWeight.w800,
-                                    color: Colors.yellowAccent,
-                                    height: 1.171875,
+                                child: ClipRRect(
+                                  borderRadius: BorderRadius.circular(45.0),
+                                  child: Container(
+                                    color: Color.fromARGB(173, 67, 28, 149),
                                   ),
                                 ),
-                              ],
-                              isRepeatingAnimation: true,
-                              repeatForever: true,
-                            ),
-                          ),
-                          Positioned(
-                            left: 0.0,
-                            top: 0.0,
-                            right: null,
-                            bottom: null,
-                            width: 50.0,
-                            height: 46.0,
-                            child: Container(
-                              decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(64.0),
                               ),
-                              child: ClipRRect(
-                                borderRadius: BorderRadius.circular(64.0),
-                                child: Image.asset(
-                                  "assets/images/flutterlogo.png",
-                                  color: null,
-                                  fit: BoxFit.cover,
-                                  colorBlendMode: BlendMode.dstATop,
+                            ),
+                            Positioned(
+                              left: 73.0,
+                              top: 12.0,
+                              right: null,
+                              bottom: null,
+                              width: 89.0,
+                              height: 23.0,
+                              child: AnimatedTextKit(
+                                animatedTexts: [
+                                  WavyAnimatedText(
+                                    'Click here',
+                                    textStyle: TextStyle(
+                                      fontSize: 17.0,
+                                      fontFamily: 'WorkSans',
+                                      fontWeight: FontWeight.w800,
+                                      color: Colors.yellowAccent,
+                                      height: 1.171875,
+                                    ),
+                                  ),
+                                ],
+                                isRepeatingAnimation: true,
+                                repeatForever: true,
+                              ),
+                            ),
+                            Positioned(
+                              left: 0.0,
+                              top: 0.0,
+                              right: null,
+                              bottom: null,
+                              width: 50.0,
+                              height: 46.0,
+                              child: Container(
+                                decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(64.0),
+                                ),
+                                child: ClipRRect(
+                                  borderRadius: BorderRadius.circular(64.0),
+                                  child: Image.asset(
+                                    "assets/images/flutterlogo.png",
+                                    color: null,
+                                    fit: BoxFit.cover,
+                                    colorBlendMode: BlendMode.dstATop,
+                                  ),
                                 ),
                               ),
-                            ),
-                          )
-                        ],
+                            )
+                          ],
+                        ),
                       ),
                     ),
                   ),)

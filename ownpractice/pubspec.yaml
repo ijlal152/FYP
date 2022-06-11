@@ -35,6 +35,10 @@ dependencies:
   firebase_ml_vision: ^0.9.6+2
   animated_text_kit: ^4.2.1
   particles_flutter: ^0.1.4
+  carousel_slider: ^4.1.1
+  cube_transition: ^1.0.2
+  avatar_glow: ^2.0.2
+
 
   #newproject:
   #  path: ./packages/newproject
@@ -88,6 +92,9 @@ flutter:
   #       - asset: fonts/TrajanPro.ttf
   #       - asset: fonts/TrajanPro_Bold.ttf
   #         weight: 700
+    - family: Nunito
+      fonts:
+        - asset: fonts/Nunito-SemiBold.ttf
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages

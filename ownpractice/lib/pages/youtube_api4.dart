@@ -42,7 +42,8 @@ class _YoutubeVideoFourState extends State<YoutubeVideoFour> {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.blue,
-        title: Text('Youtube Videos'),
+        title: Text('Youtube Video'),
+        centerTitle: true,
       ),
       backgroundColor: Color.fromARGB(255, 16, 39, 83),
       body: Center(

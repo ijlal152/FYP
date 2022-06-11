@@ -34,7 +34,7 @@ android {
 
     defaultConfig {
         // TODO: Specify your own unique Application ID (https://developer.android.com/studio/build/application-id.html).
-        applicationId "com.example.ownpractice"
+        applicationId "com.hussain.finalyearproject"
         minSdkVersion 21
         //noinspection OldTargetApi
         targetSdkVersion 30

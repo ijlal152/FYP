@@ -39,10 +39,7 @@ dependencies:
   cube_transition: ^1.0.2
   avatar_glow: ^2.0.2
   slimy_card: ^1.0.4
-
-
-  #newproject:
-  #  path: ./packages/newproject
+  flutter_launcher_icons: ^0.8.1
 
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
@@ -51,6 +48,11 @@ dev_dependencies:
   flutter_test:
     sdk: flutter
   flutter_lints: ^1.0.0
+
+flutter_icons:
+  android: "launcher_icon"
+  ios: true
+  image_path: "icons/student.png"
 
 
 # For information on the generic Dart part of this file, see the
